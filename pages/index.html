@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Traffic Assistant</title>
+        <link href="../npm/simple-datatables%407.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="../npm/litepicker/dist/css/litepicker.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <script data-search-pseudo-elements="" defer="" src="../ajax/libs/font-awesome/6.3.0/js/all.min.js" ></script>
+        <script src="../ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    </head>
+    <body class="nav-fixed">
+        <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white" id="sidenavAccordion">
+            <!-- Sidenav Toggle Button-->
+            <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 me-2 ms-lg-2 me-lg-0" id="sidebarToggle"><i data-feather="menu"></i></button>
+            <!-- Navbar Brand-->
+            <!-- * * Tip * * You can use text or an image for your navbar brand.-->
+            <!-- * * * * * * When using an image, we recommend the SVG format.-->
+            <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
+            <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="index.html">Traffic Assistant</a>
+           
+            <!-- Navbar Items-->
+            <ul class="navbar-nav align-items-center ms-auto">
+             
+              
+              
+             
+                <!-- User Dropdown-->
+                <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
+                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></a>
+                    <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
+                        <h6 class="dropdown-header d-flex align-items-center">
+                            <img class="dropdown-user-img" src="assets/img/illustrations/profiles/profile-1.png" />
+                            <div class="dropdown-user-details">
+                                <div class="dropdown-user-details-name">Valerie Luna</div>
+                               
+                            </div>
+                        </h6>
+                        <div class="dropdown-divider"></div>
+                      
+                        <a class="dropdown-item" href="login.html">
+                            <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
+                            Logout
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sidenav shadow-right sidenav-light">
+                    <div class="sidenav-menu">
+                        <div class="nav accordion" id="accordionSidenav">
+                          
+                           
+                            <!-- Sidenav Menu Heading (Core)-->
+                            <div class="sidenav-menu-heading">Core</div>
+                            <!-- Sidenav Accordion (Dashboard)-->
+                            <a class="nav-link collapsed" href="index.html"  aria-expanded="false" >
+                                <div class="nav-link-icon"><i data-feather="activity"></i></div>
+                                Dashboard
+                              
+                            </a>
+                        
+                            <!-- Sidenav Heading (Custom)-->
+                            <div class="sidenav-menu-heading">Management</div>
+                            <!-- Sidenav Accordion (Users)-->
+                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="nav-link-icon"><i data-feather="users"></i></div>
+                                Users
+                                <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" data-bs-parent="#accordionSidenav">
+                                <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPagesMenu">
+                                 
+                                  
+                                    <a class="nav-link" href="users.html">Manage Users</a>
+                                    <a class="nav-link" href="manage-groups.html">Manage Groups</a>
+                                </nav>
+                            </div>
+                            <!-- Sidenav Accordion (Locations)-->
+                            <a class="nav-link collapsed" href="locations.html"  aria-expanded="false" >
+                                <div class="nav-link-icon"><i data-feather="map-pin"></i></div>
+                                Locations
+                             
+                            </a>
+                         
+                            <!-- Sidenav Accordion (Cameras)-->
+                            <a class="nav-link collapsed" href="cameras.html" aria-expanded="false" >
+                                <div class="nav-link-icon"><i data-feather="video"></i></div>
+                                Cameras
+                            
+                            </a>
+                      
+                              <!-- Sidenav Accordion (Officers)-->
+                              <a class="nav-link collapsed" href="officers.html" aria-expanded="false" >
+                                <div class="nav-link-icon"><i data-feather="users"></i></div>
+                                Traffic Officers
+                              
+                            </a>
+                            <!-- Sidenav Heading (UI Toolkit)-->
+                            <div class="sidenav-menu-heading">Reports</div>
+                            <!-- Sidenav Accordion (Report 1)-->
+                            <a class="nav-link collapsed" href="#"  aria-expanded="false" >
+                                <div class="nav-link-icon"><i data-feather="file-text"></i></div>
+                                Report 1
+                            
+                            </a>
+                         
+                            <!-- Sidenav Accordion (Report 2)-->
+                            <a class="nav-link collapsed" href="#" aria-expanded="false" >
+                                <div class="nav-link-icon"><i data-feather="file-text"></i></div>
+                                Report 2
+                             
+                            </a>
+                        
+                            <!-- Sidenav Accordion (Audit Logs)-->
+                            <a class="nav-link collapsed" href="#" aria-expanded="false" >
+                                <div class="nav-link-icon"><i data-feather="file-text"></i></div>
+                                Audit Logs
+                             
+                            </a>
+                         
+                          
+                        </div>
+                    </div>
+                    <!-- Sidenav Footer-->
+                    <div class="sidenav-footer">
+                        <div class="sidenav-footer-content">
+                            <div class="sidenav-footer-subtitle">Logged in as:</div>
+                            <div class="sidenav-footer-title">Queen Luna</div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="activity"></i></div>
+                                            Dashboard
+                                        </h1>
+                                     
+                                    </div>
+                                    <div class="col-12 col-xl-auto mt-4">
+                                        <div class="input-group input-group-joined border-0" style="width: 16.5rem">
+                                            <span class="input-group-text"><i class="text-primary" data-feather="calendar"></i></span>
+                                            <input class="form-control ps-0 pointer" id="litepickerRangePlugin" placeholder="Select date range..." />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-n10">
+                      
+                        <!-- Count Cards-->
+                        <div class="row">
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="card bg-primary text-white h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="me-3">
+                                                <div class="text-white-75 small">Traffic Officers</div>
+                                                <div class="text-lg fw-bold">40,000</div>
+                                            </div>
+                                            <i class="feather-xl text-white-50" data-feather="users"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between small">
+                                        <a class="text-white stretched-link" href="#!">View Officers</a>
+                                        <div class="text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="card bg-warning text-white h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="me-3">
+                                                <div class="text-white-75 small">Cameras</div>
+                                                <div class="text-lg fw-bold">215,000</div>
+                                            </div>
+                                            <i class="feather-xl text-white-50" data-feather="video"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between small">
+                                        <a class="text-white stretched-link" href="#!">View Cameras</a>
+                                        <div class="text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="card bg-success text-white h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="me-3">
+                                                <div class="text-white-75 small">Locations</div>
+                                                <div class="text-lg fw-bold">24,900</div>
+                                            </div>
+                                            <i class="feather-xl text-white-50" data-feather="map-pin"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between small">
+                                        <a class="text-white stretched-link" href="#!">View Locations</a>
+                                        <div class="text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-3 mb-4">
+                                <div class="card bg-danger text-white h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="me-3">
+                                                <div class="text-white-75 small">Users</div>
+                                                <div class="text-lg fw-bold">17</div>
+                                            </div>
+                                            <i class="feather-xl text-white-50" data-feather="users"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between small">
+                                        <a class="text-white stretched-link" href="#!">View Users</a>
+                                        <div class="text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Graphs-->
+                        <div class="row">
+                            <div class="col-xl-6 mb-4">
+                                <div class="card card-header-actions h-100">
+                                    <div class="card-header">
+                                        Vehicles Flagged Monthly (Insurance)
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="areaChartDropdownExample" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="text-gray-500" data-feather="more-vertical"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="areaChartDropdownExample">
+                                                <a class="dropdown-item" href="#">Last 12 Months</a>
+                                                <a class="dropdown-item" href="#">Last 30 Days</a>
+                                                <a class="dropdown-item" href="#">Last 7 Days</a>
+                                                <a class="dropdown-item" href="#">This Month</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#!">Custom Range</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart-area"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 mb-4">
+                                <div class="card card-header-actions h-100">
+                                    <div class="card-header">
+                                        Vehicles Flagged Monthly (Nenda kwa usalama Stickers)
+                                        <div class="dropdown no-caret">
+                                            <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="areaChartDropdownExample" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="text-gray-500" data-feather="more-vertical"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="areaChartDropdownExample">
+                                                <a class="dropdown-item" href="#!">Last 12 Months</a>
+                                                <a class="dropdown-item" href="#!">Last 30 Days</a>
+                                                <a class="dropdown-item" href="#!">Last 7 Days</a>
+                                                <a class="dropdown-item" href="#!">This Month</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#!">Custom Range</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart-bar"><canvas id="myBarChart" width="100%" height="30"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </main>
+                <footer class="footer-admin mt-auto footer-light">
+                    <div class="container-xl px-4">
+                        <div class="row">
+                            <div class="col-md-6 small">Copyright © Traffic Assistant 2023</div>
+                            <div class="col-md-6 text-md-end small">
+                                <a href="#">Privacy Policy</a>
+                                ·
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../npm/bootstrap%405.2.3/dist/js/bootstrap.bundle.min.js" ></script>
+        <script src="js/scripts.js"></script>
+        <script src="../ajax/libs/Chart.js/2.9.4/Chart.min.js" ></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="../npm/simple-datatables%407.1.2/dist/umd/simple-datatables.min.js" ></script>
+        <script src="js/datatables/datatables-simple-demo.js"></script>
+        <script src="../npm/litepicker/dist/bundle.js"></script>
+        <script src="js/litepicker.js"></script>
+
+        
+</body>
+
+
+</html>
